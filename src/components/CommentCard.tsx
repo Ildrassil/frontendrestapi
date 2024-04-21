@@ -7,7 +7,7 @@ type CommentCardProps = {
 export default function CommentCard({comment}: CommentCardProps) {
 
     return (
-        <div className={"bg-white rounded-lg shadow-doubleOut hover:shadow-doubleIn m-4 p-4"}>
+        <div className={"bg-offWhite rounded-lg shadow-buttonOut mb-4 p-4"}>
             <div className={"flex flex-row w-fit align-middle"}>
                 <h3 className={"text-lg align-middle ml-2 text-textHeader " +
                     "px-6 shadow-buttonOut rounded-2xl"}>{comment.name}</h3>
