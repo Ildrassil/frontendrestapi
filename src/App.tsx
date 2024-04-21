@@ -1,6 +1,4 @@
-import {useEffect, useState} from "react";
-import axios from "axios";
-import {PostType} from "./model/PostType.tsx";
+
 import "./App.css";
 import {PostGallery} from "./components/postGallery.tsx";
 import {Link, Route, Routes} from "react-router-dom";
