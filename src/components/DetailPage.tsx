@@ -25,7 +25,7 @@ export default function DetailPage() {
         }
         catch (error) {
             console.log("Error fetching data");
-        };
+        }
     }
 
     const getComments = async () => {
