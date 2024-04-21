@@ -11,12 +11,12 @@ export function PostCard({ post }:PostCardProps) {
         navigate("/post/" + post.id);
     }
     return (
-        <div className={"p-2 bg-offWhite"}>
+        <div className={"p-2"}>
             <h2 className={"text-xl font-semibold truncate"}>{post.title}</h2>
             <p className={"mt-5 p-4 rounded-xl text-left text-m shadow-buttonIn text-pretty text-clip overflow-hidden"}>{post.body}</p>
             <button
                 onClick={toDetails}
-                className={"bg-offWhite p-2 rounded-lg px-2  my-6 shadow-buttonOut hover:shadow-buttonIn active:shadow-buttonIn"}>
+                className={"bg-offWhite p-2 rounded-lg px-4  my-6 shadow-buttonOut hover:shadow-buttonIn active:shadow-buttonIn"}>
                 View Comments
             </button>
         </div>)
