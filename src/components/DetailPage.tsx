@@ -13,9 +13,11 @@ export default function DetailPage() {
     const [post, setPost] = useState<PostType>();
     const [comments, setComments] = useState<comment[]>([]);
 
-    function getPost() {
-        axios.get("https://jsonplaceholder.typicode.com/posts/" + postId.id).then(response => {
-            setPost(response.data);
+    const getPost = async () => {
+        const response = await axios.get("https://jsonplaceholder.typicode.com/posts/" + postId.id);
+        try{
+
+        }
         });
     }
 

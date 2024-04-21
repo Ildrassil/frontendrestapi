@@ -8,24 +8,7 @@ import DetailPage from "./components/DetailPage.tsx";
 
 
 function App() {
-    const [posts, setPosts] = useState<PostType[]>([]);
 
-    const getData = async () => {
-        try {
-            const response = await axios.get("https://jsonplaceholder.typicode.com/posts");
-            if (response) {
-                setPosts([...response.data]);
-            } else {
-                console.log("Error fetching data");
-            }
-        } catch (error) {
-            console.log("Error fetching data");
-        }
-    }
-
-    useEffect(() => {
-        getData();
-    }, []);
 
     return (<div className={"flex flex-wrap items-center"}>
         <div className={"justify-center text-center flex flex-col"}>
@@ -36,7 +19,7 @@ function App() {
                </h1>
             </Link>
             <Routes>
-                <Route path={"/"} element={(posts.length>0)&&<PostGallery Posts={posts}/>}/>
+                <Route path={"/"} element={<PostGallery/>}/>
                 <Route path={"/post/:id"} element={<DetailPage/>}/>
             </Routes>
 
