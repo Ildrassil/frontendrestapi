@@ -14,17 +14,31 @@ export default function DetailPage() {
     const [comments, setComments] = useState<comment[]>([]);
 
     const getPost = async () => {
-        const response = await axios.get("https://jsonplaceholder.typicode.com/posts/" + postId.id);
-        try{
 
+        try{
+            const response = await axios.get("https://jsonplaceholder.typicode.com/posts/" + postId.id);
+            if (response) {
+                setPost(response.data);
+            } else {
+                console.log("Error fetching data");
+            }
         }
-        });
+        catch (error) {
+            console.log("Error fetching data");
+        };
     }
 
-    function getComments() {
-        axios.get("https://jsonplaceholder.typicode.com/comments?postId=" + postId.id).then(response => {
-            setComments([...response.data]);
-        });
+    const getComments = async () => {
+        try {
+          const response = await axios.get("https://jsonplaceholder.typicode.com/comments?postId=" + postId.id);
+            if (response) {
+                setComments([...response.data]);  }
+            else {
+                console.log("Error fetching Comments");
+            }
+        }catch (error) {
+            console.log("Error fetching Comments");
+        }
     }
 
     useEffect(() => {
