@@ -25,6 +25,7 @@ export default {
         "buttonOut": "rgba(255, 255, 255, 1) -11px -11px 20px, #d1d9e6 11px 11px 20px",
         "hashtagbutton": "inset rgba(255, 255, 255, 1) -5px -5px 8px, inset #d1d9e6 5px 5px 8px",
         "hashtagbuttonOut": "rgba(255, 255, 255, 1) -5px -5px 8px,  #d1d9e6 5px 5px 8px",
+        "lineShadow":"rgba(255, 255, 255, 1) -2px -2px 4px,  #d1d9e6 2px 2px 4px"
 
       }
     },

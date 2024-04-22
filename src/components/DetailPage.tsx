@@ -53,7 +53,7 @@ export default function DetailPage() {
                 <h1 className={"text-4xl text-textHeader mb-10"}>{post?.title}</h1>
                 <p className={"text-lg text-left text-wrap text-textPrime"}>{post?.body}</p>
                 <h2 className={"text-lg text-textHeader text-left mt-10 mb-4"}>Comments:</h2>
-                <div className={"flex flex-col"}>
+                <div className={"flex flex-col shadow-doubleIn p-5 rounded-3xl "}>
                     {comments && comments.map((comment, index) => (
                         <CommentCard key={index} comment={comment}/>
                     ))}
